@@ -18,5 +18,5 @@ fi
 # Loop through the list of websites in the file
 while read website; do
     # Run the ffuf command for each website
-    ffuf -w /home/kali/ffufwrd/common.txt -u "$website"/FUZZ -mc 200,403
+    ffuf -w /home/kali/websitelistfuzzer/dir.txt -u "$website"/FUZZ -mc 200
 done < "$file"
